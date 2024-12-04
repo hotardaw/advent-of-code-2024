@@ -25,6 +25,7 @@ func main() {
 
 		pattern := regexp.MustCompile(`mul\(\d+,\d+\)|do\(\)|don't\(\)`)
 		instructions := pattern.FindAllString(scanner.Text(), -1) // []string
+
 		for _, instruction := range instructions {
 			if strings.Compare("do()", instruction) == 0 {
 				do = true
